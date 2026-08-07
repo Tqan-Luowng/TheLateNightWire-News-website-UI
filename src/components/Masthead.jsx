@@ -44,37 +44,7 @@ export default function Masthead({ currentUser, activePage, setActivePage, activ
           </div>
         </div>
 
-        <nav className="masthead__nav" aria-label="Chuyên mục chính">
-          <button 
-            className={activePage === 'home' && activeSection === 'lead' ? 'active' : ''} 
-            onClick={() => handleNavClick('lead')}
-          >
-            Tin đầu
-          </button>
-          <button 
-            className={activePage === 'home' && activeSection === 'desk' ? 'active' : ''} 
-            onClick={() => handleNavClick('desk')}
-          >
-            Bàn tin
-          </button>
-          <button 
-            className={activePage === 'home' && activeSection === 'markets' ? 'active' : ''} 
-            onClick={() => handleNavClick('markets')}
-          >
-            Thị trường
-          </button>
-          <button 
-            className={activePage === 'home' && activeSection === 'culture' ? 'active' : ''} 
-            onClick={() => handleNavClick('culture')}
-          >
-            Văn hoá
-          </button>
-          {currentUser && (
-            <button className="wire-btn wire-btn--secondary" style={{ padding: '2px 8px', fontSize: '0.7rem' }} onClick={onOpenPublishModal}>
-              + Viết Bài
-            </button>
-          )}
-        </nav>
+
 
         <div className="masthead__meta">
           <div className="masthead__clock-box">

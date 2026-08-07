@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 
 import Masthead from './components/Masthead';
+import Navbar from './components/Navbar';
 import Ticker from './components/Ticker';
 import Markets from './components/Markets';
 import ArticleModal from './components/ArticleModal';
@@ -190,10 +191,17 @@ export default function App() {
         currentUser={currentUser}
         activePage={activePage}
         setActivePage={setActivePage}
+      />
+
+      {/* Main navigation bar */}
+      <Navbar
+        activePage={activePage}
+        setActivePage={setActivePage}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
+        currentUser={currentUser}
         onOpenPublishModal={() => {
           if (!currentUser) {
             showToast('Vui lòng đăng nhập để viết bài.');
